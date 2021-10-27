@@ -1,0 +1,24 @@
+{
+  "name": "restaurants-sequalise",
+  "version": "1.0.0",
+  "description": "Using an ORM to create DB and DB relationships",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienMaheCrenn/Restaurants-Sequalise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienMaheCrenn/Restaurants-Sequalise/issues"
+  },
+  "homepage": "https://github.com/JulienMaheCrenn/Restaurants-Sequalise#readme",
+  "dependencies": {
+    "sequelize": "^6.8.0",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2"
+  }
+}
