@@ -10,6 +10,8 @@ async function main() {
         await start();
         const objects = await createRows();
         await runQueries(objects);
+        await updateRows(objects);
+        await deleteRows(objects);
     } catch (e) {
         throw new Error(e.message);
     };
@@ -53,4 +55,26 @@ async function runQueries(objects) {
 
     console.log(`*** Found all restos: ${JSON.stringify(restaurants)}`);
     console.log(`*** Found all menus: ${JSON.stringify(menus)}`);
+};
+
+async function updateRows(objects) {
+    [juliensPizzeria] = objects;
+
+    await juliensPizzeria.update({ name: "Julien's Burger Place"}, {
+        where: {
+            name: "Julien's Pizzeria"
+        }
+    });
+};
+
+async function deleteRows(objects) {
+    [juliensPizzeria] = objects;
+
+    const menu = await Restaurant.findAll
+
+    await chocolatePizza.destroy({
+        where: {
+            name: "Chocolate Pizza"
+        }
+    });
 };
